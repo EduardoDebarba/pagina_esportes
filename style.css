@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(204, 198, 198);
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "second-section third-section";
+    padding: 20px;
+    flex: 1 0 auto;
+    display: flex;
+}
+
+.header{
+    background-color: black;
+    display: flex;
+    width: 100%;
+    height: 120px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-image{
+    padding-left: 85px;
+    width: 450px;
+    min-width: 300px;
+}
+
+#icon-media{
+    display: none;
+}
+
+.header-list{
+    padding-right: 85px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.list-itens{
+    padding-left: 70px;
+    font-size: 30px;
+}
+
+.list-itens:hover{
+    color: red;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.first-section{
+    text-align: center;
+    margin-top: 35px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+    transition: 0.3s;
+}
+
+h1{
+    font-size: 45px;
+}
+
+.first-section > p{
+    font-size: 25px;
+}
+
+.second-section{
+    width: 75%;
+    margin-bottom: 50px;
+    grid-area: second-section;
+}
+
+.main-content{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card{
+    width: 400px;
+    height: 550px;
+    background-color: rgb(228, 228, 217);
+    border-radius: 20px;
+}
+
+@media (hover: hover){
+    .card:hover{
+        box-shadow: 0 0 0.313em 0.313em rgb(151, 151, 147);
+        transition: 0.3s;
+    }
+}
+
+.background-cards{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+}
+
+#background-card1{
+    background-image: url(./images/basquete.jpeg);
+}
+
+#background-card2{
+    background-image: url(./images/tenis.jpeg);
+}
+
+#background-card3{
+    background-image: url(./images/futebol.jpeg);
+}
+
+#background-card4{
+    background-image: url(./images/futebol_americano.jpeg);
+}
+
+#background-card5{
+    background-image: url(./images/surf.jpeg);
+}
+
+#background-card6{
+    background-image: url(./images/natacao.jpeg);
+}
+
+#background-card7{
+    background-image: url(./images/yoga.jpeg);
+}
+
+#background-card8{
+    background-image: url(./images/boxe.jpeg);
+}
+
+#background-card9{
+    background-image: url(./images/corrida.jpeg);
+}
+
+.content-sports{
+    text-align: justify;
+    padding: 20px;
+}
+
+h3{
+    padding-bottom: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.third-section{
+    background-color: rgb(96, 88, 88);
+    height: 100%;
+    width: 25%;
+    margin-left: 100px;
+    border-radius: 20px;
+    color: rgb(228, 228, 217);
+    grid-area: third-section;
+    min-width: 300px;
+    margin-right: 25px;
+}
+
+h2{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.image-lateral-card{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+}
+
+.footer-image{
+    padding-left: 90px;
+    width: 450px;
+}
+
+.footer-text{
+    padding-right: 85px;
+    color: white;
+    font-size: 25px;
+}
+
+@media (max-width: 835px) {
+    main{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .header{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    
+    .header-image{
+        width: 300px;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .header-list{
+        gap: 30px;
+        padding:0;
+    }
+    
+    .list-itens{
+        font-size: 35px;
+        padding: 0;
+    }
+    
+
+    .second-section{
+        width: 100%;
+    }
+
+    .card{
+        width: 80%;
+    }
+
+    .third-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%; 
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer-image{
+        padding-left: 50px;
+        width: 300px;
+    }
+    
+    .footer-text{
+        padding-right: 50px;
+        color: white;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    
+    main{
+        overflow: hidden;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .header{
+        background-color: black;
+        display: flex;
+        width: 100%;
+        height: 150px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    
+    .header-image{
+        width: 150px;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .header-list{
+        list-style: none;
+        gap: 35px;
+        padding:0;
+      
+    }
+
+    .header-itens{
+       padding: 0;
+    }
+    
+    .list-itens{
+        font-size: 30px;
+        padding: 0;
+    }
+    
+
+    h1{
+        font-size: 35px;
+    }
+    
+    .first-section > p{
+        font-size: 20px;
+    }
+
+    .second-section{
+        width: 100%;
+    }
+
+    .card{
+        width: 90%;
+        height: 700px;
+    }
+
+    .third-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 90%; 
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 120px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+    .footer-image{
+        padding-left: 20px;
+        width: 250px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    
+    .footer-text{
+        color: white;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+
